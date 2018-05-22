@@ -1,0 +1,131 @@
+#page {
+  &.active-form {
+    display: none;
+  }
+}
+
+#contact-form {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .5s, z-index 0s 1s;
+  z-index: -50;
+
+  .contact-form {
+    min-height: 100%;
+
+    .back-link {
+      display: block;
+    }
+  }
+
+  &.active {
+    overflow-y: auto;
+    opacity: 1;
+    z-index: 50;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .form-cover {
+    flex: 1;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../../img/kado_logo_bg.jpg") 50% 50% /cover no-repeat;
+  }
+
+  .form-container {
+    padding: 35px 20px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .form-group {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      input, textarea {
+        margin: 10px;
+        padding: 12px 23px 13px;
+        flex: 1;
+        border: 1px solid #dfe3ea;
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 1.56;
+        font-weight: 400;
+        color: rgba(85,85,85,.7);
+
+        &:focus {
+          outline: none;
+          border-color: #bbbbc2;
+        }
+
+        &.invalid {
+          border-color: #ff7f7f;
+        }
+      }
+    }
+
+    .main-btn {
+      display: block;
+      margin: 30px auto 0;
+      font-weight: 400;
+    }
+
+    .back-link {
+      display: none;
+      margin-top: 40px;
+      font-size: 16px;
+      line-height: 1.15;
+      font-weight: 500;
+      color: #00bfaf;
+    }
+
+    .success-block {
+      max-width: 560px;
+      padding: 3em 0;
+      text-align: center;
+
+      p {
+        margin: 3em auto;
+        font-size: 18px;
+        line-height: 1.67;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .form-container {
+      padding: 70px 20px 60px;
+    }
+  }
+}

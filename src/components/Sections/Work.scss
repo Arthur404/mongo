@@ -1,0 +1,70 @@
+@import "../../style/var";
+
+.work {
+  padding: 60px 0;
+
+  .title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .description {
+    margin: -25px auto 50px;
+    max-width: 950px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.94;
+  }
+
+  .work-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+      flex-shrink: 0;
+      margin-bottom: 30px;
+      padding: 0 20px;
+      text-align: center;
+      width: 100%;
+
+      .work-icon {
+        margin: 0 auto 22px;
+        width: 100px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .work-title {
+        font-size: 16px;
+        line-height: 1.56;
+        font-weight: 500;
+        color: $black;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    padding: 120px 0;
+
+    .title {
+      margin-bottom: 100px;
+    }
+
+    .description {
+      margin: -50px auto 100px;
+    }
+
+    .work-items {
+      flex-wrap: nowrap;
+
+      li {
+        margin-bottom: 0;
+        width: 20%;
+      }
+    }
+  }
+}

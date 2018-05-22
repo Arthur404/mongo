@@ -1,0 +1,56 @@
+.social {
+  display: flex;
+  align-items: center;
+
+  li ~ li {
+    margin-left: 25px;
+  }
+
+  li {
+    svg path {
+      transition: opacity .5s;
+    }
+
+    &:hover {
+      &.facebook {
+        svg path {
+          fill: #4c76be;
+          opacity: 1;
+        }
+      }
+
+      &.linkedin {
+        svg path {
+          fill: #0b86ca;
+          opacity: 1;
+        }
+      }
+
+      &.twitter {
+        svg path {
+          fill: #00c7ff;
+          opacity: 1;
+        }
+      }
+
+      &.flickr {
+        svg path.dribble-red {
+          fill: #ff0084;
+          opacity: 1;
+        }
+
+        svg path.dribble-blue {
+          fill: #0062dd;
+          opacity: 1;
+        }
+      }
+
+      &.dribbble {
+        svg path {
+          fill: #f25b98;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

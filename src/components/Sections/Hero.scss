@@ -1,0 +1,47 @@
+@import "../../style/var";
+
+.hero {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  background: $black;
+  overflow: hidden;
+  color: white;
+
+  .welcome {
+    margin: 60px auto 120px;
+    max-width: 710px;
+
+    .kado-logo {
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      margin-bottom: 32px;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    p {
+      max-width: 660px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: white;
+    }
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: 992px) {
+    .welcome {
+      margin: 100px auto 160px;
+    }
+  }
+}

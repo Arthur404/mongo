@@ -1,0 +1,57 @@
+@import "../../style/var";
+
+.team {
+  padding: 60px 0 50px;
+  background-color: rgba(216,216,216,.15);
+
+  .title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .items {
+    .person {
+      margin-bottom: 30px;
+      text-align: center;
+
+      .photo {
+        margin: 0 auto 22px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .name {
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 1.56;
+        font-weight: 500;
+        color: $black;
+      }
+
+      p {
+        opacity: .7;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    padding: 120px 0 100px;
+
+    .title {
+      margin-bottom: 100px;
+    }
+
+    .items {
+      .person {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

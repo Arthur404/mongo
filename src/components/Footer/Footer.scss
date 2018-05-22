@@ -1,0 +1,76 @@
+@import "../../style/var";
+
+.main-footer {
+  padding: 35px 0 20px;
+  background-color: rgba(216,216,216,.15);
+
+  .location {
+    margin-bottom: 30px;
+    max-width: 85%;
+
+    .city {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 1.56;
+      font-weight: 500;
+      color: $black;
+    }
+
+    address {
+      font-size: 14px;
+      line-height: 1.79;
+      font-weight: 400;
+      color: #555;
+    }
+  }
+
+  .bottom-footer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .copy {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.56;
+      font-weight: 400;
+      color: #9b9b9b;
+
+      a {
+        display: inline-block;
+        margin-left: 10px;
+        padding-left: 13px;
+        border-left: 1px solid #e3e3e3;
+        line-height: 1.2;
+
+        &:hover {
+          color: #0072f6;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 520px) {
+    .bottom-footer {
+      flex-direction: row;
+
+      .copy {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    padding: 70px 0 40px;
+
+    .location {
+      margin-bottom: 0;
+    }
+
+    .bottom-footer {
+      margin-top: 100px;
+    }
+  }
+}

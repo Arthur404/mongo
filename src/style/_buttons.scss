@@ -1,0 +1,129 @@
+.main-btn {
+  position: relative;
+  display: inline-block;
+  padding: 20px 40px;
+  background: $gradient;
+  border-radius: 60px;
+  border: 0;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $hover-gradient;
+    border-radius: 60px;
+    overflow: hidden;
+    transition: opacity 1s;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: white;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.scroll-down {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: $gradient;
+  overflow: hidden;
+  cursor: pointer;
+  animation: down .7s linear infinite;
+
+  @keyframes down {
+    0% { transform: translate(-50%, 0); }
+    25% { transform: translate(-50%, 10px); }
+    50% { transform: translate(-50%, 15px); }
+    75% { transform: translate(-50%, 10px); }
+    100% { transform: translate(-50%, 0); }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $hover-gradient;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: opacity 1s;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  img {
+    width: 16px;
+    height: auto;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.demo-btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid rgba(68,209,255,1);
+  border-radius: 30px;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+  transition: border 1s;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  z-index: 1;
+
+  &:hover {
+    border: 2px solid rgba(80,227,194,1);
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  @media (min-width: 992px) {
+    padding: 10px 25px;
+  }
+}

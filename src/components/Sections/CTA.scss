@@ -1,0 +1,33 @@
+@import "../../style/var";
+
+.cta {
+  padding: 90px 0 70px;
+  text-align: center;
+  background: url("../../img/photo-kado.jpg") 50% 50% /cover no-repeat, $black;
+  overflow: hidden;
+  color: white;
+
+  .title {
+    margin: 0 auto 40px;
+    max-width: 810px;
+    color: white;
+  }
+
+  .description {
+    margin: 0 auto 50px;
+    max-width: 750px;
+    color: white;
+  }
+
+  .main-btn {
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  @media (min-width: 992px) {
+    padding: 180px 0 130px;
+  }
+}

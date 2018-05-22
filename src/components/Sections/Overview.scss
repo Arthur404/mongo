@@ -1,0 +1,54 @@
+@import "../../style/var";
+
+.overview {
+  padding: 60px 0 70px;
+  background-color: rgba(216,216,216,.15);
+
+  .title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .list {
+    .item {
+      margin-bottom: 35px;
+
+      h3 {
+        margin-left: 18px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 1.39;
+        font-weight: 500;
+        color: $black;
+
+        &:before {
+          margin-left: -17px;
+          margin-right: 10px;
+          content: '';
+          display: inline-block;
+          width: 8px;
+          height: 12px;
+          background: url("../../img/icon/arrow-green.svg") 50% 50% /cover no-repeat;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    padding: 120px 0 140px;
+
+    .title {
+      margin-bottom: 100px;
+    }
+
+    .list {
+      .item {
+        margin-bottom: 70px;
+      }
+    }
+  }
+}

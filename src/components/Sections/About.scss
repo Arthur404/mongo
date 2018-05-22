@@ -1,0 +1,21 @@
+.about {
+  padding: 60px 0;
+  background-color: rgba(216,216,216,.15);
+
+  .about-cover {
+    margin-bottom: 30px;
+    height: 200px;
+    background: url("../../img/about-kado.jpg") 50% 50% /cover no-repeat, #555;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 992px) {
+    padding: 120px 0;
+
+    .about-cover {
+      margin-bottom: 0;
+      height: 100%;
+    }
+  }
+}
